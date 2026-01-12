@@ -1,16 +1,30 @@
 package ufpa.icen.pvz.model;
 
-/*
-Representa os possíveis estados de uma entidade no jogo.
-*/
-
+/**
+ * Representa os possíveis estados de uma entidade no jogo.
+ * <p>
+ * Cada estado indica a condição atual da entidade e pode afetar seu comportamento
+ * e renderização na tela.
+ * </p>
+ */
 public enum EstadoEntidade {
-    // Entidade ativa e esperando ação
-    VIVO,
-    // Entidade realizando um ataque
+    /**
+     * Entidade está ativa e viva, aguardando execução de ações.
+     */
+    VIVA,
+    
+    /**
+     * Entidade está no processo de realizar um ataque.
+     */
     ATACANDO,
-    // Entidade em movimento
+    
+    /**
+     * Entidade está em movimento no tabuleiro.
+     */
     MOVENDO,
-    // Entidade que foi eliminada (será removida do jogo)
-    MORTO
+    
+    /**
+     * Entidade foi eliminada e será removida do jogo.
+     */
+    MORTA
 }

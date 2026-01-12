@@ -1,10 +1,15 @@
 package ufpa.icen.pvz.model;
 
-/*
-Classe de configuração do jogo Plants vs Zombies.
-Contém constantes que definem parâmetros constantes do jogo.
-*/
-
+/**
+ * Classe de configuração do jogo Plants vs Zombies.
+ * <p>
+ * Contém constantes reutilizáveis que definem parâmetros do jogo como dimensões do tabuleiro,
+ * custos de recursos, tempos de ciclo e atributos das entidades.
+ * </p>
+ * <p>
+ * Esta classe não deve ser instanciada. Use as constantes públicas estáticas diretamente.
+ * </p>
+ */
 public class Config {
     // tabuleiro
     public static final int LARGURA_TABULEIRO = 9;
@@ -16,7 +21,7 @@ public class Config {
     public static final int CUSTO_ATIRADOR = 50;
 
     // tempo em milissegundos
-    public static final int TEMPO_CICLO = 500;
+    public static final int TEMPO_CICLO = 1000;
     public static final int TEMPO_DISPARO = 1000;
     public static final int TEMPO_SPAWN_ZUMBIS = 3000;
 
