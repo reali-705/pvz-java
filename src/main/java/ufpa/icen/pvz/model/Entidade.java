@@ -1,26 +1,14 @@
 package ufpa.icen.pvz.model;
 
 public abstract class Entidade {
-    protected int vida;
-    protected int vidaMaxima;
     protected double posicaoX;
     protected int posicaoY;
     protected EstadoEntidade estado;
 
-    public Entidade(int vidaMaxima, double posicaoX, int posicaoY) {
-        this.vidaMaxima = vidaMaxima;
-        this.vida = vidaMaxima;
+    public Entidade(double posicaoX, int posicaoY) {
         this.posicaoX = posicaoX;
         this.posicaoY = posicaoY;
-        this.estado = EstadoEntidade.VIVO;
-    }
-
-    public void receberDano(int dano) {
-        this.vida -= dano;
-        if (this.vida <= 0) {
-            this.vida = 0;
-            this.estado = EstadoEntidade.MORTO;
-        }
+        this.estado = EstadoEntidade.VIVA;
     }
 
     public abstract void atualizar();
@@ -38,12 +26,5 @@ public abstract class Entidade {
     }
     public int getPosicaoY() {
         return posicaoY;
-    }
-
-    public int getVida() {
-        return vida;
-    }
-    public int getVidaMaxima() {
-        return vidaMaxima;
     }
 }
