@@ -8,7 +8,7 @@ public class InputHandler {
     public InputHandler() {
         this.commandQueue = new LinkedList<>();
     }
-}
+
     public void addCommand(InputCommand command) {
         commandQueue.add(command);
     }
